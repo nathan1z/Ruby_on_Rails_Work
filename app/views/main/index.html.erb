@@ -1,3 +1,7 @@
 <div class="d-flex align-items-center justify-content-center">
 <h1>Welcome to my first page</h1>
+
+<% if @user %>
+  Loggen in as: <%= @user.email%>
+<% end%>
 </div>
