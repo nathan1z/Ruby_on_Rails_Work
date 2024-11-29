@@ -14,7 +14,18 @@ Rails.application.routes.draw do
 
    get "/about-us" , to:"about#index", as: :about
    get "/", to: "main#index", as: :root
+ 
+   get "sign_in", to: "sessions#new"
+   post "sign_in", to: "sessions#create"
+
    get "sign_up", to: "registration#new"
-   post "/sign_up", to: "registration#create"
+   post "sign_up", to: "registration#create"
+
+
+
+
+  delete "/logout", to: "sessions#destroy"
+
+
 
 end

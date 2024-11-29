@@ -1,7 +1,8 @@
 <div class="d-flex align-items-center justify-content-center">
 <h1>Welcome to my first page</h1>
-
-<% if @user %>
-  Loggen in as: <%= @user.email%>
-<% end%>
 </div>
+
+<% if Current.user %>
+  <p>Logged in as: <%= Current.user.email %></p>
+  <%= button_to "Logout", logout_path, method: :delete %>
+<% end %>
