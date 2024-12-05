@@ -65,4 +65,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "browser", "~> 6.1"
+gem "browser", "~> 6.2"
